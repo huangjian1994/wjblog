@@ -21,15 +21,22 @@
     <!-- Spring -->
     <spring.version>4.3.15.RELEASE</spring.version>
     <spring.data.version>2.0.6.RELEASE</spring.data.version>
+    <tk.mybatis.version>4.0.1</tk.mybatis.version>
     <mybatis.version>3.4.6</mybatis.version>
     <mybatis.spring.version>1.3.2</mybatis.spring.version>
-    <mysql.jdbc.driver>6.0.6</mysql.jdbc.driver>
+    <mysql.jdbc.driver>5.1.20</mysql.jdbc.driver>
     <druid.version>1.1.9</druid.version>
     <jstl.version>1.2</jstl.version>
     <aspectj.version>1.9.0</aspectj.version>
     <cglib.version>3.2.6</cglib.version>
     <logback.version>1.2.3</logback.version>
     <slf4j.version>1.7.25</slf4j.version>
+    <lang3.version>3.7</lang3.version>
+    <collections.version>3.2.2</collections.version>
+    <beanutils.version>1.9.3</beanutils.version>
+    <junit.version>4.12</junit.version>
+    <guava.version>24.1-jre</guava.version>
+
 
   </properties>
 
@@ -37,9 +44,33 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${lang3.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>${collections.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>${beanutils.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+
 
     <!-- LOGGING begin -->
     <dependency>
@@ -176,11 +207,24 @@
     </dependency>
 
     <dependency>
+      <groupId>tk.mybatis</groupId>
+      <artifactId>mapper</artifactId>
+      <version>${tk.mybatis.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
       <version>${mybatis.spring.version}</version>
     </dependency>
 
+    <!-- test -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
