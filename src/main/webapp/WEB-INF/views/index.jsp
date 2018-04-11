@@ -1,12 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/views/include/taglibs.jsp" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
-    <title>Simple - Free CSS template by ChocoTemplates.com</title>
+    <title>主页</title>
     <link rel="shortcut icon" type="image/x-icon" href="${basepath}/static/blog/img/favicon.ico" />
     <link rel="stylesheet" href="${basepath}/static/blog/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="${basepath}/static/blog/css/flexslider.css" type="text/css" media="all" />
@@ -28,9 +27,9 @@
             <a href="#" class="nav-btn">HOMEPAGE<span></span></a>
             <span class="top-nav-shadow"></span>
             <ul>
-                <li class="active"><span><a href="#">home</a></span></li>
+                <li class="active"><span><a href="#">主页</a></span></li>
                 <li><span><a href="#">services</a></span></li>
-                <li><span><a href="#">projects</a></span></li>
+                <li><span><a href="#">项目</a></span></li>
                 <li><span><a href="#">solutions</a></span></li>
                 <li><span><a href="#">jobs</a></span></li>
                 <li><span><a href="#">blog</a></span></li>
