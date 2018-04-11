@@ -278,5 +278,31 @@
         </resources>
       </build>
     </profile>
+
+    <profile>
+      <id>release</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>${basedir}/profile/release</directory>
+          </resource>
+        </resources>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.1.1</version>
+            <configuration>
+              <detail>true</detail>
+              <!--<containerConfigXML>svn.info</containerConfigXML>-->
+              <!-- <webXml>${basedir}/profile/release/web.xml</webXml> -->
+              <warName>blog</warName>
+              <warSourceDirectory>${basedir}/src/main/webapp</warSourceDirectory>
+              <outputDirectory>${project.build.directory}/blog</outputDirectory>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>

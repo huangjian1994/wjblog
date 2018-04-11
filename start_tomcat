@@ -1,0 +1,3 @@
+/opt/tomcat/bin/startup.sh blog
+
+echo "start tomcat-blog server"

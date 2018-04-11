@@ -1,0 +1,43 @@
+profile=$1
+
+##checkout from git
+git pull https://github.com/OneObject/wjblog.git
+
+##compile and war
+mvn clean compile war:war -P $profile 
+
+##stop tomcat
+chmod +x stop_tomcat
+./stop_tomcat
+
+##convert blog.war to mo.tar.gz
+cd target/blog
+jar -xvf blog.war
+rm -rf blog.war
+cd ..
+tar -czvf blog.tar.gz blog
+
+##deplay the blog.tar.gz
+
+#remove execute resoucre dir
+rmback_path="/opt/applications/webapps/blog/"
+ls $rmback_path |egrep -v resource |xargs -i  rm -fr ${rmback_path}/{}
+
+#rm -rf /opt/applications/webapps/blog
+mkdir -p /opt/applications/webapps/blog
+tar -zxvf blog.tar.gz -C /opt/applications/webapps/
+
+rm -rf /opt/applications/webapps/blog/.git
+
+##makte tomcat webapps link
+rm -rf /opt/tomcat/webapps/blog
+ln -s  /opt/applications/webapps/blog /opt/tomcat/webapps/blog
+
+#resource ln
+rm -f /opt/applications/webapps/blog/resource
+ln -s /mnt/data/blog_resource  /opt/applications/webapps/blog/resource
+
+##start tomcat
+cd ..
+chmod +x start_tomcat
+./start_tomcat
