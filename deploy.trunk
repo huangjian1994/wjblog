@@ -34,7 +34,7 @@ rm -rf /opt/tomcat/webapps/blog
 ln -s  /opt/applications/webapps/blog /opt/tomcat/webapps/blog
 
 #resource ln
-rm -f /opt/applications/webapps/blog/resource
+rm -rf /opt/applications/webapps/blog/resource
 ln -s /mnt/data/blog_resource  /opt/applications/webapps/blog/resource
 
 ##start tomcat
