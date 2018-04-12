@@ -30,7 +30,7 @@
                 <li class="active"><span><a href="#">主页</a></span></li>
                 <li><span><a href="#">services</a></span></li>
                 <li><span><a href="#">项目</a></span></li>
-                <li><span><a href="#">solutions</a></span></li>
+                <li><span><a href="#">案例</a></span></li>
                 <li><span><a href="#">jobs</a></span></li>
                 <li><span><a href="#">blog</a></span></li>
                 <li><span><a href="#">contacts</a></span></li>
